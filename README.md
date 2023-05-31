@@ -3,10 +3,10 @@
 <div align="center">
   <img src="logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-
-  <h3><b>John Palacios Microverse Student</b></h3>
-
+  <h3><b>John Palacios - Microverse Student</b></h3>
 </div>
+
+<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -18,7 +18,6 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -39,15 +38,10 @@ Developer Portfolio.
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
-  </ul>
-  <ul>
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
-  </ul>
-  <ul>
     <li><a href="https://github.com/">GitHub</a></li>
-  </ul>
-  <ul>
     <li><a href="https://www.figma.com/">Figma</a></li>
+    <li><a href="https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=0%3A1">Figma Template</a></li>
   </ul>
 </details>
 
@@ -57,6 +51,7 @@ Developer Portfolio.
 
 - **[HTML Document]**
 - **[CSS Document]**
+- **[Figma Template Design]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,7 +71,8 @@ Clone this repository to your desired folder:
 
 ```
 cd Portfolio-Project
-git clone https://github.com/Rysth/Hello-Microverse-Project.git
+git clone https://github.com/Rysth/Portfolio-Project.git
+code . (To open VS Code Editor)
 ```
 
 ## 👥 Authors <a name="authors"></a>
@@ -84,12 +80,6 @@ git clone https://github.com/Rysth/Hello-Microverse-Project.git
 👤 **Rysth**
 
 - GitHub: [@rysth](https://github.com/Rysth)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Implement Login Page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
