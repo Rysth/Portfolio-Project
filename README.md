@@ -25,10 +25,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio Project] <a name="about-project"></a>
+# 📖 Portfolio Project <a name="about-project"></a>
 
-**[Portfolio Project]** is a project where I've to show my skills setting up my workspace to properly finish my Web
-Developer Portfolio.
+**Portfolio Project** is a project where I've to show my skills setting up my workspace properly to finish my first Web
+Developer Portfolio project by following a Figma Portfolio Template Design.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,9 +49,9 @@ Developer Portfolio.
 
 ### Key Features <a name="key-features"></a>
 
-- **[HTML Document]**
-- **[CSS Document]**
-- **[Figma Template Design]**
+- **HTML Document**
+- **CSS Document**
+- **Figma Template Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
