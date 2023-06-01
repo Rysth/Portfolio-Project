@@ -58,7 +58,7 @@ Portfolio project by following a Figma Portfolio Template Design.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://raw.githack.com/Rysth/Portfolio-Project/main/index.html)
+- [Live Demo Link](https://rysth.github.io/Portfolio-Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
