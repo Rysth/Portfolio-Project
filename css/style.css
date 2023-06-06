@@ -20,6 +20,8 @@
 	--FF-primary-poppins: "Poppins", sans-serif;
 }
 
+/* COMMON STYLES */
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -63,12 +65,26 @@ hr {
 	border: none;
 }
 
+input,
+button,
+label {
+	font-family: var(--FF-primary-poppins);
+}
+
+button {
+	border: none;
+}
+
 /* GENERAL STYLES */
+
+/* 1- Containers */
 
 .container {
 	width: min(86%, 180rem);
 	margin: 0 auto;
 }
+
+/* 2- Font Colors */
 
 .color-primary {
 	color: var(--CL-primary-blue);
@@ -86,20 +102,32 @@ hr {
 	color: var(--CL-primary-gray-650);
 }
 
+.color-white {
+	color: var(--CL-neutral-white);
+}
+
+/* 3- Height/Width */
+
 .h-100 {
 	height: 100%;
 }
 
-.button__primary {
+/* 4- Buttons */
+
+.button {
 	display: inline-block;
-	margin: 1.25em 0 0 0;
-	padding: 12px;
-	border: 1px solid var(--CL-primary-blue);
+	padding: 12px 14px;
 	border-radius: 8px;
 	font-size: 17px;
-	color: var(--CL-primary-blue-500);
 	letter-spacing: 0.03em;
 	transition: all 0.15s ease-out;
+	font-weight: 500;
+}
+
+.button__primary {
+	margin: 0.75em 0 0 0;
+	border: 1px solid var(--CL-primary-blue);
+	color: var(--CL-primary-blue-500);
 }
 
 .button__primary:hover {
@@ -117,6 +145,14 @@ hr {
 	color: var(--CL-neutral-white);
 }
 
+.button__secondary {
+	margin: 0;
+	background-color: var(--CL-neutral-white);
+	color: var(--CL-primary-blue);
+}
+
+/* 5- Links */
+
 .primary__link {
 	text-transform: uppercase;
 	color: var(--CL-primary-blue-250);
@@ -127,7 +163,7 @@ hr {
 	gap: 1.5em;
 }
 
-/* FLEX CLASSES */
+/* 6- Flexbox/Grid System */
 
 .flex-row {
 	display: flex;
@@ -136,6 +172,10 @@ hr {
 .flex-column {
 	display: flex;
 	flex-direction: column;
+}
+
+.grid {
+	display: grid;
 }
 
 .align-center {
@@ -150,8 +190,26 @@ hr {
 	justify-content: center;
 }
 
-.grid {
-	display: grid;
+/* 7- Font Sizes */
+
+.h2 {
+	font-size: 40px;
+}
+
+/* 8- Padding/Margins */
+
+.padding-4 {
+	padding: 4em 0;
+}
+
+/* 9- Text Align */
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
 }
 
 /* TOOLBAR STYLES */
@@ -180,9 +238,9 @@ hr {
 #background__image {
 	background-image: url("../images/shapes-mobile.svg");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 	position: absolute;
-	top: 48px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -192,7 +250,6 @@ hr {
 /* MAIN STYLES */
 
 .main {
-	margin-top: 48px;
 	height: 100%;
 }
 
@@ -210,6 +267,14 @@ hr {
 
 .section__white--bottom {
 	border-radius: 0 0 0 6em;
+}
+
+.section__blue {
+	background-color: var(--CL-primary-blue);
+}
+
+.section__blue--top {
+	border-radius: 6em 0 0 0;
 }
 
 .headline {
@@ -300,11 +365,7 @@ hr {
 	border-radius: 8px;
 }
 
-/* About Section */
-.about {
-	padding: 4em 0;
-}
-
+/* ABOUT STYLES */
 .about__header {
 	gap: 0.5em;
 }
@@ -336,6 +397,52 @@ hr {
 	border-radius: 8px;
 	font-weight: 500;
 	font-size: 15px;
+}
+
+/* CONTACTS SECTION */
+
+#contact {
+	background-image: url("../images/shapes-mobile-form.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contact__header {
+	gap: 0.5em;
+}
+
+.contact__description {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.contact__form {
+	padding: 2em 0;
+}
+
+.contact__list {
+	list-style: none;
+	gap: 1em;
+}
+
+.contact__item {
+	display: block;
+}
+
+.input {
+	min-width: 100%;
+	padding: 0.65em 1em;
+	border-radius: 8px;
+	border: none;
+	font-size: 17px;
+	font-family: var(--FF-primary-poppins);
+}
+
+.input--textarea {
+	min-height: 170px;
+	max-height: 12em;
+	resize: vertical;
 }
 
 @media (min-width: 768px) {
@@ -377,6 +484,8 @@ hr {
 	.headline__description {
 		font-size: 20px;
 	}
+
+	/* Main Styles */
 
 	.portfolio__card {
 		grid-template-columns: 1fr 1fr;
