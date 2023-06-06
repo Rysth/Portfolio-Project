@@ -125,11 +125,6 @@ button {
 	cursor: pointer;
 }
 
-.button:active {
-	background-color: var(--CL-primary-dark);
-	color: var(--CL-neutral-white);
-}
-
 .button:disabled {
 	background-color: var(--CL-primary-blue-600);
 	color: var(--CL-neutral-white);
@@ -139,6 +134,11 @@ button {
 	margin: 0.75em 0 0 0;
 	border: 1px solid var(--CL-primary-blue);
 	color: var(--CL-primary-blue-500);
+}
+
+.button__primary:active {
+	background-color: var(--CL-primary-dark);
+	color: var(--CL-neutral-white);
 }
 
 .button__primary:hover {
@@ -154,6 +154,11 @@ button {
 
 .button__secondary:hover {
 	background-color: var(--CL-primary-blue-250);
+	color: var(--CL-neutral-white);
+}
+
+.button__primary:active {
+	background-color: var(--CL-primary-dark);
 	color: var(--CL-neutral-white);
 }
 
@@ -516,12 +521,12 @@ button {
 		font-size: 40px;
 	}
 
-	.portfolio__profile {
-		font-size: 18px;
-	}
-
 	.portfolio__header--reversed {
 		grid-column: 2/3;
 		grid-row: 1 / 3;
+	}
+
+	.portfolio__profile {
+		font-size: 18px;
 	}
 }
