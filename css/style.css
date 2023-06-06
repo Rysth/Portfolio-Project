@@ -17,7 +17,7 @@
 	--CL-neutral-white-off-200: #f7f7f9;
 
 	/* Font Families */
-	--FF-primary-poppins: "Poppins", sans-serif;
+	--FF-primary: "Poppins", sans-serif;
 }
 
 /* COMMON STYLES */
@@ -38,7 +38,7 @@ body {
 }
 
 body {
-	font-family: var(--FF-primary-poppins);
+	font-family: var(--FF-primary);
 	background-color: var(--CL-neutral-white-off-200);
 }
 
@@ -68,7 +68,7 @@ hr {
 input,
 button,
 label {
-	font-family: var(--FF-primary-poppins);
+	font-family: var(--FF-primary);
 }
 
 button {
@@ -194,6 +194,7 @@ button {
 
 .h2 {
 	font-size: 40px;
+	line-height: 52px;
 }
 
 /* 8- Padding/Margins */
@@ -210,6 +211,10 @@ button {
 
 .text-left {
 	text-align: left;
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
 
 /* TOOLBAR STYLES */
@@ -285,17 +290,10 @@ button {
 	margin: 0 auto;
 }
 
-/* HEADLINE STYLES */
-
-.headline__title {
-	font-size: 40px;
-	line-height: 52px;
-}
-
 /* PORTFOLIO STYLES */
+
 .portfolio {
 	gap: 4em;
-	padding: 4em 0;
 }
 
 .portfolio__card {
@@ -326,10 +324,6 @@ button {
 	gap: 2em;
 	font-size: 13px;
 	margin: 0.75em 0;
-}
-
-.portfolio__author {
-	text-transform: uppercase;
 }
 
 .portfolio__list {
@@ -368,10 +362,6 @@ button {
 /* ABOUT STYLES */
 .about__header {
 	gap: 0.5em;
-}
-
-.about__title {
-	font-size: 40px;
 }
 
 .about__category {
@@ -436,7 +426,7 @@ button {
 	border-radius: 8px;
 	border: none;
 	font-size: 17px;
-	font-family: var(--FF-primary-poppins);
+	font-family: var(--FF-primary);
 }
 
 .input--textarea {
