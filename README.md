@@ -27,9 +27,8 @@
 
 # 📖 Portfolio Project <a name="about-project"></a>
 
-**Portfolio Project** is a project where I've to show my skills
-setting up my workspace properly to finish my first Web Developer
-Portfolio project by following a Figma Portfolio Template Design.
+**Portfolio Project** is a project where I've to show my skills setting up my workspace properly to
+finish my first Web Developer Portfolio project by following a Figma Portfolio Template Design.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -94,15 +93,15 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project feel free to watch it and take some features
-that will enhance your project aswell.
+If you like this project feel free to watch it and take some features that will enhance your project
+aswell.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank to the Microverse Team for reviewing my code and
-make me a better proffessional.
+I would like to thank to the Microverse Team for reviewing my code and make me a better
+proffessional.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
