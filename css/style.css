@@ -90,10 +90,6 @@ button {
   color: var(--CL-primary-blue);
 }
 
-.color-secondary {
-  color: var(--CL-primary-blue-250);
-}
-
 .color-dark {
   color: var(--CL-primary-dark);
 }
@@ -210,8 +206,8 @@ button {
 
 /* 8- Padding/Margins */
 
-.padding-4 {
-  padding: 4em 0;
+.padding-5 {
+  padding: 5em 0;
 }
 
 /* 9- Text Align */
@@ -236,13 +232,17 @@ button {
   left: 0;
   right: 0;
   background-color: var(--CL-neutral-white);
-  height: 48px;
+  height: 60px;
   z-index: 100;
 }
 
 .header__link {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.header__toggle {
+  width: 1.8rem;
 }
 
 .header__nav {
@@ -255,7 +255,6 @@ button {
   background-image: url("../images/shapes-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -304,7 +303,7 @@ button {
 /* PORTFOLIO STYLES */
 
 .portfolio {
-  gap: 4em;
+  gap: 5.4em;
 }
 
 .portfolio__card {
@@ -438,6 +437,7 @@ button {
   border: none;
   font-size: 17px;
   font-family: var(--FF-primary);
+  color: var(--CL-primary-dark);
 }
 
 .input--textarea {
@@ -445,6 +445,7 @@ button {
   max-height: 12em;
   max-width: 100%;
   resize: vertical;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {

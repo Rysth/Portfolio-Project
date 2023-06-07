@@ -13,21 +13,7 @@
 		<header class="header">
 			<div class="container header flex-row align-center justify-between">
 				<a href="#" class="header__link color-primary">My Logo</a>
-				<svg
-					class="header__toggle"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
-						d="M3 7C3 6.44772 3.44772 6 4 6H20C20.5523 6 21 6.44772 21 7C21 7.55228 20.5523 8 20 8H4C3.44772 8 3 7.55228 3 7ZM3 12C3 11.4477 3.44772 11 4 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L4 13C3.44772 13 3 12.5523 3 12ZM4 16C3.44772 16 3 16.4477 3 17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17C21 16.4477 20.5523 16 20 16H4Z"
-						fill="#6070FF"
-					/>
-				</svg>
+				<img class="header__toggle" src="images/icons/burguer.svg" alt="" />
 				<nav class="header__nav">
 					<ul class="header__list flex-row align-center">
 						<li class="header__list--item">
@@ -90,7 +76,7 @@
 			<!-- WORKS SECTION -->
 
 			<div class="section" id="portfolio">
-				<div class="portfolio padding-4 grid justify-center">
+				<div class="portfolio padding-5 grid justify-center">
 					<!-- PORTFOLIO CARD NUMBER 1 -->
 					<article class="portfolio__card grid">
 						<header class="portfolio__header">
@@ -217,7 +203,7 @@
 			<!-- ABOUT SECTION -->
 
 			<section class="section section__white section__white--top" id="about">
-				<div class="about padding-4">
+				<div class="about padding-5">
 					<header class="about__header flex-column justify-center">
 						<h2 class="h2 color-dark">About Myself</h2>
 						<p class="color-info">
@@ -295,7 +281,7 @@
 			<!-- CONTACTS SECTION -->
 
 			<section class="section section__blue section__blue--top" id="contact">
-				<div class="contact padding-4 text-center">
+				<div class="contact padding-5 text-center">
 					<header class="contact__header flex-column">
 						<h2 class="h2 color-white">Contact me</h2>
 						<p class="contact__description color-white">
@@ -312,12 +298,19 @@
 									name="name"
 									id="name"
 									maxlength="30"
-									placeholder="Name"
+									placeholder="Your name"
 									required
 								/>
 							</li>
 							<li class="contact__item">
-								<input class="input" type="email" name="email" id="email" placeholder="Email" required />
+								<input
+									class="input"
+									type="email"
+									name="email"
+									id="email"
+									placeholder="Your Email"
+									required
+								/>
 							</li>
 							<li class="contact__item">
 								<textarea
