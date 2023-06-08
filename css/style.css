@@ -352,6 +352,7 @@ ul {
   gap: 2em;
   flex-wrap: wrap;
   line-height: 0.001;
+  list-style-type: disc;
 }
 
 .portfolio__description {
@@ -527,13 +528,14 @@ ul {
   .about__item {
     flex-direction: column;
     padding: 1em;
+    align-items: flex-start;
   }
 
   .portfolio__card {
     grid-template-columns: 1fr 1fr;
     height: 496px;
     max-width: 1156px;
-    gap: 2em;
+    gap: 46px;
     cursor: pointer;
     transition: box-shadow 0.15s ease-in-out;
   }
@@ -554,7 +556,7 @@ ul {
   .portfolio__content {
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 2.5em 1.5em;
     gap: 0.5em;
   }
 
@@ -566,8 +568,16 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .grid-two-columns--uneven {
+    grid-template-columns: 40% 60%;
+  }
+
   .grid-three-columns {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-four-columns {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .grid--reversed {
