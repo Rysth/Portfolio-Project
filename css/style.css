@@ -434,6 +434,11 @@ ul {
   gap: 0.5em;
 }
 
+.contact__content {
+  max-width: 569px;
+  margin: 0 auto;
+}
+
 .contact__description {
   font-size: 20px;
   font-weight: 300;
@@ -476,11 +481,6 @@ ul {
   max-width: 100%;
   resize: vertical;
   font-size: 15px;
-}
-
-.contact__content {
-  max-width: 569px;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
