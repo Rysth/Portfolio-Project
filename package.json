@@ -15,5 +15,9 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1",
+    "npm": "^9.7.1"
   }
 }
