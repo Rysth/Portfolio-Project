@@ -14,21 +14,24 @@
 			<div class="container">
 				<div class="header__content flex-row align-center justify-between">
 					<a href="#" class="header__link color-primary">My Logo</a>
-					<img
-						class="header__toggle"
-						src="images/icons/burguer.svg"
-						alt="Menu icon on the mobile version"
-					/>
-					<nav class="header__nav">
-						<ul class="header__list flex-row align-center">
-							<li class="header__list--item">
-								<a class="color-info" href="#portfolio">Portfolio</a>
+					<button href="#" id="header__button">
+						<img
+							id="header__button--image"
+							class="header__toggle"
+							src="images/icons/burguer.svg"
+							alt="Menu icon on the mobile version"
+						/>
+					</button>
+					<nav class="header__nav header__nav--inactive" id="header__nav">
+						<ul class="header__list header__list--inactive flex-row align-center">
+							<li>
+								<a class="header__list--item" href="#portfolio">Portfolio</a>
 							</li>
-							<li class="header__list--item">
-								<a class="color-info" href="#about">About</a>
+							<li>
+								<a class="header__list--item" href="#about">About</a>
 							</li>
-							<li class="header__list--item">
-								<a class="color-info" href="#contact">Contact</a>
+							<li>
+								<a class="header__list--item" href="#contact">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -343,5 +346,6 @@
 				</div>
 			</section>
 		</main>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
