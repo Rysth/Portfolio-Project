@@ -3,6 +3,7 @@
 :root {
   /* Primary Colors */
   --CL-primary-blue: #6070ff;
+  --CL-primary-blue-150: #a7aeff;
   --CL-primary-blue-250: #7f8cff;
   --CL-primary-blue-500: #396df2;
   --CL-primary-blue-600: #2230d2;
@@ -542,7 +543,7 @@ ul {
     height: 496px;
     gap: 46px;
     cursor: pointer;
-    transition: box-shadow 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in, border-color 0.1s ease-in;
   }
 
   .portfolio__item {
@@ -551,6 +552,7 @@ ul {
 
   .portfolio__card:hover {
     box-shadow: 0 10px 50px 10px var(--CL-neutral-white-off);
+    border-color: var(--CL-primary-blue-150);
   }
 
   .portfolio__image {
@@ -602,5 +604,9 @@ ul {
 
   .contact__actions {
     text-align: center;
+  }
+
+  .input {
+    border-radius: 0;
   }
 }
