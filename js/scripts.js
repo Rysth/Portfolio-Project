@@ -98,7 +98,6 @@ function createWorkWindow(index) {
 
   const modalItem = document.createElement(`div`);
   modalItem.classList.add('modal');
-
   showWorkContent(modalItem);
 }
 
