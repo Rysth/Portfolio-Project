@@ -98,6 +98,59 @@ function createWorkWindow(index) {
 
   const modalItem = document.createElement(`div`);
   modalItem.classList.add('modal');
+  modalItem.innerHTML = `
+            <article class="modal__card">
+              <header class="modal__header flex-row justify-between">
+                <h2 class="modal__title">${name}</h2>
+                <button class="modal__button">
+                  <img
+                    id="modal__button--image"
+                    class="header__toggle"
+                    src="./images/icons/x-icon.svg"
+                    alt="Menu icon on the mobile version"
+                  />
+                </button>
+              </header>
+              <div class="modal__content flex-column">
+                <div class="modal__profile flex-row align-center">
+                  <h3 class="uppercase color-info">${profile}</h3>
+                  <ul class="modal__list flex-row">
+                    ${categories
+                      .map((item) => `<li class="modal__item">${item}</li>`)
+                      .join('')}
+                  </ul>
+                </div>
+                <img
+                  src="${image}"
+                  alt="Work 1"
+                  class="modal__image"
+                />
+                <p class="modal__description">
+                  ${description}
+                </p>
+                <ul class="modal__tags flex-row align-center">
+                   ${technologies
+                     .map((item) => `<li class="modal__tag">${item}</li>`)
+                     .join('')}
+                </ul>
+                <hr />
+                <div class="modal__actions flex-row">
+                  <a
+                    id="0"
+                    href="${live}"
+                    class="button button__primary modal__button"
+                    >See live</a
+                  >
+                  <a
+                    id="0"
+                    href="${source}"
+                    class="button button__primary modal__button"
+                    >See source</a
+                  >
+                </div>
+              </div>
+            </article>
+         `;
   showWorkContent(modalItem);
 }
 
