@@ -30,6 +30,8 @@
 **Portfolio Project** is a project where I've to show my skills setting up my workspace properly to
 finish my first Web Developer Portfolio project by following a Figma Portfolio Template Design.
 
+Also, I'm going to implement new technologies such as JavaScript files over the course of the program.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -39,6 +41,7 @@ finish my first Web Developer Portfolio project by following a Figma Portfolio T
   <ul>
     <li><a href="https://www.w3schools.com/html/">HTML</a></li>
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+    <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
     <li><a href="https://github.com/">GitHub</a></li>
     <li><a href="https://www.figma.com/">Figma</a></li>
     <li><a href="https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=0%3A1">Figma Template</a></li>
@@ -51,6 +54,7 @@ finish my first Web Developer Portfolio project by following a Figma Portfolio T
 
 - **HTML Document**
 - **CSS Document**
+- **JavaScript DOM Manipulation**
 - **Figma Template Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
