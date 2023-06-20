@@ -7,6 +7,7 @@
   --CL-primary-blue-250: #7f8cff;
   --CL-primary-blue-500: #396df2;
   --CL-primary-blue-600: #2230d2;
+  --CL-primary-gray-200: #c1c7d0;
   --CL-primary-gray-300: #7a869a;
   --CL-primary-gray-650: #344563;
   --CL-primary-light: #ebebff;
@@ -512,6 +513,92 @@ ul {
   resize: vertical;
   font-size: 15px;
 }
+
+/* POPUP WINDOW */
+.modal {
+  background: rgba(140, 144, 150, 0.25);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+}
+
+.modal__card {
+  background-color: var(--CL-neutral-white);
+  border-radius: 16px;
+  padding: 18px 16px;
+  width: min(92%, 1156px);
+}
+
+.modal__title {
+  font-size: 32px;
+  color: var(--CL-primary-dark);
+}
+
+.modal__button {
+  background: none;
+}
+
+.modal__content {
+  gap: 1em;
+}
+
+.modal__profile {
+  font-size: 13px;
+  gap: 2em;
+}
+
+.modal__list {
+  padding: 0;
+  list-style-type: disc;
+  gap: 1.8em;
+}
+
+.modal__item {
+  color: var(--CL-primary-gray-300);
+  font-weight: 600;
+}
+
+.modal__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal__description {
+  font-size: 15px;
+  color: var(--CL-primary-gray-650);
+}
+
+.modal__tags {
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.modal__tag {
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--CL-primary-blue);
+  padding: 4px 12px;
+  background-color: var(--CL-primary-light);
+}
+
+.modal__actions {
+  gap: 0.25em;
+}
+
+.modal__button {
+  flex: 1;
+  text-align: center;
+}
+
+/* DESKTOP VERSION STYLES */
 
 @media (min-width: 768px) {
   /* HEADER STYLES */
