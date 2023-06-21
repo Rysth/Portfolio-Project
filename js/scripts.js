@@ -158,7 +158,7 @@ window.onload = () => {
                       id="0"
                       href="${source}"
                       target="_blank"
-                      class="button button__primary modal__button modal__button--purple  flex-row align-center justify-center"
+                      class="button button__primary modal__button modal__button--purple flex-row align-center justify-center"
                       >See source
                         <img
                         src="./images/icons/dark/github-dark.svg"
