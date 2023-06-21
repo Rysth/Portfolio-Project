@@ -138,6 +138,7 @@ ul {
   transition: all 0.15s ease-out;
   font-weight: 500;
   cursor: pointer;
+  background: none;
 }
 
 .button:disabled {
@@ -516,7 +517,7 @@ ul {
 
 /* POPUP WINDOW */
 .modal {
-  background: rgba(140, 144, 150, 0.25);
+  background: rgba(75, 88, 105, 0.25);
   backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
@@ -536,12 +537,8 @@ ul {
 }
 
 .modal__title {
-  font-size: 32px;
+  font-size: 30px;
   color: var(--CL-primary-dark);
-}
-
-.modal__button {
-  background: none;
 }
 
 .modal__content {
@@ -571,6 +568,11 @@ ul {
   border-radius: 8px;
 }
 
+.modal__system {
+  gap: 0.75em;
+  padding: 0.25em 0;
+}
+
 .modal__description {
   font-size: 15px;
   color: var(--CL-primary-gray-650);
@@ -590,12 +592,21 @@ ul {
 }
 
 .modal__actions {
-  gap: 0.25em;
+  gap: 0.5em;
 }
 
 .modal__button {
   flex: 1;
-  text-align: center;
+  background: none;
+  font-size: 15px;
+  gap: 1em;
+}
+
+#modal__button--close {
+  display: inline;
+  float: right;
+  margin-right: 0.75em;
+  cursor: pointer;
 }
 
 /* DESKTOP VERSION STYLES */
@@ -713,12 +724,16 @@ ul {
     font-size: 40px;
   }
 
-  .grid-two-columns {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-uneven-one {
+    grid-template-columns: 40% 60%;
   }
 
-  .grid-two-columns--uneven {
-    grid-template-columns: 40% 60%;
+  .grid-uneven-two {
+    grid-template-columns: 70% 30%;
+  }
+
+  .grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-three-columns {
@@ -750,6 +765,27 @@ ul {
 
   .input {
     border-radius: 0;
+  }
+
+  .modal {
+    overflow: auto;
+    padding: 2em;
+  }
+
+  .modal__title {
+    font-size: 40px;
+    color: var(--CL-primary-dark);
+  }
+
+  .modal__profile * {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .modal__image {
+    border-radius: 0;
+    height: 586px;
+    margin-bottom: 1em;
   }
 }
 
