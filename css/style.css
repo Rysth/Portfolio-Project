@@ -602,6 +602,7 @@ ul {
   background: none;
   font-size: 15px;
   gap: 0.5em;
+  padding: 12px 14px;
 }
 
 .modal__button--purple {
@@ -791,6 +792,10 @@ ul {
     border-radius: 0;
     height: 586px;
     margin-bottom: 1em;
+  }
+
+  .modal__button {
+    padding: 8px 0;
   }
 }
 
