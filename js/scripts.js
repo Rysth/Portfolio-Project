@@ -25,7 +25,7 @@ window.onload = () => {
 
   /* Portfolio Section */
 
-  //PortfolioArray: Contains all the Information for each Portfolio Card.
+  // PortfolioArray: Contains all the Information for each Portfolio Card.
   const portfolioArray = [
     {
       id: '0',
@@ -81,71 +81,13 @@ window.onload = () => {
     },
   ];
 
-  //BodyElement: Body tag selected to be used as a platform for the PopUp Window.
-  //PortfolioElement: Portfolio Section tag selected to contain all the Portfolio Cards.
+  // BodyElement: Body tag selected to be used as a platform for the PopUp Window.
+  // PortfolioElement: Portfolio Section tag selected to contain all the Portfolio Cards.
   const bodyElement = document.querySelector('#body');
   const portfolioElement = document.querySelector('#portfolio');
 
-  //AddPortfolioWork(): Put every Portfolio Card to his container.
-  function addPortfolioWork() {
-    portfolioElement.innerHTML = `
-  ${portfolioArray
-    .map(
-      (item) =>
-        `<article class="portfolio__card grid" >
-              <header class="portfolio__header ${item.class}">
-                <img
-                  src="${item.image}"
-                  alt="Work 1"
-                  class="portfolio__image"
-                />
-              </header>
-              <div class="portfolio__content grid">
-                <h2 class="portfolio__title color-dark">${item.name}</h2>
-                <div class="portfolio__profile flex-row align-center">
-                  <h3 class="uppercase color-info">${item.profile}</h3>
-                  <ul class="portfolio__list flex-row">
-                      ${item.categories
-                        .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`
-                        )
-                        .join('')}
-                  </ul>
-                </div>
-                <p class="primary_description">
-                  ${item.description}
-                </p>
-                <ul class="portfolio__tags flex-row align-center">
-                  ${item.technologies
-                    .map((item) => `<li class="portfolio__tag">${item}</li>`)
-                    .join('')}
-                </ul>
-                <div class="portfolio__actions">
-                  <button
-                    id="${item.id}"
-                    href="#"
-                    class="button button__primary portfolio__button"
-                    >See project</button>
-                </div>
-              </div>
-            </article>`
-    )
-    .join('')}`;
-
-    const portfolioButtons = document.querySelectorAll('.portfolio__button');
-    portfolioButtons.forEach((button) => {
-      button.addEventListener('click', (event) => {
-        const index = event.target.id;
-        createWorkWindow(index);
-      });
-    });
-  }
-
-  //AddPortfolioWork(): Called of the Function to fill the PortfolioElement.
-  addPortfolioWork();
-
-  //CreateWorkWindow(index): Create a new PopUp Window each time that's called.
-  //--index: Works to retrieved the Data stored on the PortfolioArray by using his index.
+  // CreateWorkWindow(index): Create a new PopUp Window each time that's called.
+  // --index: Works to retrieved the Data stored on the PortfolioArray by using his index.
   function createWorkWindow(index) {
     const portfolioData = portfolioArray[index];
 
@@ -160,7 +102,7 @@ window.onload = () => {
       source,
     } = portfolioData;
 
-    const modalItem = document.createElement(`div`);
+    const modalItem = document.createElement('div');
     modalItem.id = 'modal';
     modalItem.classList.add('modal');
     modalItem.innerHTML = `
@@ -238,4 +180,61 @@ window.onload = () => {
       bodyElement.style.overflow = 'auto';
     });
   }
+
+  // AddPortfolioWork(): Put every Portfolio Card to his container.
+  function addPortfolioWork() {
+    portfolioElement.innerHTML = `
+  ${portfolioArray
+    .map(
+      (item) => `<article class="portfolio__card grid" >
+              <header class="portfolio__header ${item.class}">
+                <img
+                  src="${item.image}"
+                  alt="Work 1"
+                  class="portfolio__image"
+                />
+              </header>
+              <div class="portfolio__content grid">
+                <h2 class="portfolio__title color-dark">${item.name}</h2>
+                <div class="portfolio__profile flex-row align-center">
+                  <h3 class="uppercase color-info">${item.profile}</h3>
+                  <ul class="portfolio__list flex-row">
+                      ${item.categories
+                        .map(
+                          (item) => `<li class="portfolio__item">${item}</li>`,
+                        )
+                        .join('')}
+                  </ul>
+                </div>
+                <p class="primary_description">
+                  ${item.description}
+                </p>
+                <ul class="portfolio__tags flex-row align-center">
+                  ${item.technologies
+                    .map((item) => `<li class="portfolio__tag">${item}</li>`)
+                    .join('')}
+                </ul>
+                <div class="portfolio__actions">
+                  <button
+                    id="${item.id}"
+                    href="#"
+                    class="button button__primary portfolio__button"
+                    >See project</button>
+                </div>
+              </div>
+            </article>`,
+    )
+    .join('')}`;
+
+    const portfolioButtons = document.querySelectorAll('.portfolio__button');
+    portfolioButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const index = event.target.id;
+        createWorkWindow(index);
+      });
+    });
+  }
+
+  // AddPortfolioWork(): Called of the Function to fill the PortfolioElement.
+  addPortfolioWork();
 };
