@@ -527,13 +527,15 @@ ul {
   z-index: 200;
   display: grid;
   place-items: center;
+  overflow: auto;
+  padding: 1em;
 }
 
 .modal__card {
   background-color: var(--CL-neutral-white);
   border-radius: 16px;
-  padding: 18px 16px;
-  width: min(92%, 1156px);
+  padding: 1em;
+  width: min(100%, 1156px);
 }
 
 .modal__title {
@@ -767,8 +769,7 @@ ul {
     border-radius: 0;
   }
 
-  .modal {
-    overflow: auto;
+  .modal__card {
     padding: 2em;
   }
 
