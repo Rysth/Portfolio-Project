@@ -158,7 +158,7 @@ window.onload = () => {
                       id="0"
                       href="${source}"
                       target="_blank"
-                      class="button button__primary modal__button flex-row align-center justify-center"
+                      class="button button__primary modal__button modal__button--purple  flex-row align-center justify-center"
                       >See source
                         <img
                         src="./images/icons/dark/github-dark.svg"
@@ -203,7 +203,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`,
+                          (item) => `<li class="portfolio__item">${item}</li>`
                         )
                         .join('')}
                   </ul>
@@ -224,7 +224,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`,
+            </article>`
     )
     .join('')}`;
 

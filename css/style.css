@@ -601,7 +601,11 @@ ul {
   flex: 1;
   background: none;
   font-size: 15px;
-  gap: 1em;
+  gap: 0.5em;
+}
+
+.modal__button--purple {
+  color: var(--CL-primary-blue);
 }
 
 #modal__button--close {
@@ -731,7 +735,7 @@ ul {
   }
 
   .grid-uneven-two {
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
   }
 
   .grid-two-columns {
