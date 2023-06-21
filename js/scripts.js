@@ -34,7 +34,7 @@ window.onload = () => {
       categories: ['Back End Dev', '2015'],
       description:
         'A daily selection of privately personalized reads; no accounts or sign-ups required',
-      image: '../images/portfolio/work_1.png',
+      image: './images/portfolio/work_1.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       live: '#',
       source: '#',
@@ -47,7 +47,7 @@ window.onload = () => {
       categories: ['Full Stack Dev', '2015'],
       description:
         'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-      image: '../images/portfolio/work_2.png',
+      image: './images/portfolio/work_2.png',
       technologies: ['HTML', 'Ruby on Rails', 'CSS', 'JavaScript'],
       live: '#',
       source: '#',
@@ -60,7 +60,7 @@ window.onload = () => {
       categories: ['Full Stack Dev', '2015'],
       description:
         'Exploring the future of media in Facebook`s first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-      image: '../images/portfolio/work_3.png',
+      image: './images/portfolio/work_3.png',
       technologies: ['HTML', 'Ruby on Rails', 'CSS', 'JavaScript'],
       live: '#',
       source: '#',
@@ -73,7 +73,7 @@ window.onload = () => {
       categories: ['Lead Developer', '2018'],
       description:
         'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-      image: '../images/portfolio/work_4.png',
+      image: './images/portfolio/work_4.png',
       technologies: ['HTML', 'Ruby on Rails', 'CSS', 'JavaScript'],
       live: '#',
       source: '#',
@@ -201,7 +201,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`,
+                          (item) => `<li class="portfolio__item">${item}</li>`
                         )
                         .join('')}
                   </ul>
@@ -222,7 +222,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`,
+            </article>`
     )
     .join('')}`;
 
