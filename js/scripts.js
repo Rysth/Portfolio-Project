@@ -146,6 +146,7 @@ window.onload = () => {
                     <a
                       id="0"
                       href="${live}"
+                      target="_blank"
                       class="button button__primary modal__button flex-row align-center justify-center"
                       >See live 
                       <img
@@ -156,6 +157,7 @@ window.onload = () => {
                     <a
                       id="0"
                       href="${source}"
+                      target="_blank"
                       class="button button__primary modal__button flex-row align-center justify-center"
                       >See source
                         <img
