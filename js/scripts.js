@@ -203,7 +203,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`,
+                          (item) => `<li class="portfolio__item">${item}</li>`
                         )
                         .join('')}
                   </ul>
@@ -224,7 +224,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`,
+            </article>`
     )
     .join('')}`;
 
@@ -258,11 +258,11 @@ formElement.addEventListener('submit', (event) => {
     const letter = emailArray[index];
     const validator = isUpperCase(letter);
     if (validator) {
-      submitError.style.display = 'inline-block';
+      submitError.style.visibility = 'visible';
       event.preventDefault();
       break;
     } else {
-      submitError.style.display = 'none';
+      submitError.style.visibility = 'hidden';
     }
   }
 });
