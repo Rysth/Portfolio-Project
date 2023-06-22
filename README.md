@@ -17,6 +17,7 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
+  - [Test](#test)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -77,6 +78,16 @@ Clone this repository to your desired folder:
 cd Portfolio-Project
 git clone https://github.com/Rysth/Portfolio-Project.git
 code . (To open VS Code Editor)
+```
+
+### Test
+
+In order to follow the Linters you could check them using this:
+
+```
+npx hint . (Checks the HTML files.)
+npx stylelint "**/*.{css,scss}" (Checks the CSS/SCSS files.)
+npx eslint . (Checks the JavaScript files.)
 ```
 
 ## 👥 Authors <a name="authors"></a>
