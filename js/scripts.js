@@ -266,6 +266,19 @@ window.onload = () => {
     }
   });
 
+  //Function: InjectFormData()
+  //Put the information contained within the LocalStorage item called userData if the object exist.
+  //userData contains name, email and message.
+  function injectFormData() {
+    const object = JSON.parse(localStorage.getItem('userData'));
+    if (object) {
+      inputFields.forEach((input) => {
+        const value = object[input['id']];
+        input.value = value;
+      });
+    }
+  
+
   //Function: createLocalStorage()
   //Create a FormData object which contains every single Input from the actual Form matching his key with his own value
   //Then it creates the new localStorage item called userData
