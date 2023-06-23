@@ -203,7 +203,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`
+                          (item) => `<li class="portfolio__item">${item}</li>`,
                         )
                         .join('')}
                   </ul>
@@ -224,7 +224,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`
+            </article>`,
     )
     .join('')}`;
 
@@ -266,42 +266,41 @@ window.onload = () => {
     }
   });
 
-  //Function: InjectFormData()
-  //Put the information contained within the LocalStorage item called userData if the object exist.
-  //userData contains name, email and message.
+  // Function: InjectFormData()
+  // Put the information contained within the LocalStorage item called userData if the object exist.
+  // userData contains name, email and message.
+  const inputFields = document.querySelectorAll('.input');
   function injectFormData() {
     const object = JSON.parse(localStorage.getItem('userData'));
     if (object) {
       inputFields.forEach((input) => {
-        const value = object[input['id']];
+        const value = object[input.id];
         input.value = value;
       });
     }
-  
+  }
 
-  //Function: createLocalStorage()
-  //Create a FormData object which contains every single Input from the actual Form matching his key with his own value
-  //Then it creates the new localStorage item called userData
-  //userData contains name, email and message.
+  // Function: createLocalStorage()
+  // Create a FormData object which contains every single Input from the actual Form matching his
+  // key with his own value then it creates the new localStorage item called userData
+  // userData contains name, email and message.
+  const userData = {};
   function createLocalStorage(formElement) {
     const formData = new FormData(formElement);
 
-    //UserData: Single Data Object.
-    const userData = {};
-    for (const data of formData.entries()) {
-      const key = data[0];
-      const value = data[1];
-      userData[key] = value;
-    }
+    // UserData: Single Data Object.
+    userData.name = formData.get('name');
+    userData.email = formData.get('email');
+    userData.message = formData.get('message');
+
     localStorage.setItem('userData', JSON.stringify(userData));
   }
 
-  //InputFields: Form input elements.
-  //Update in real-time the information container within the localStorage item.
-  //userData contains name, email and message.
-  const inputFields = document.querySelectorAll('.input');
+  // InputFields: Form input elements.
+  // Update in real-time the information container within the localStorage item.
+  // userData contains name, email and message.
   inputFields.forEach((input) => {
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       createLocalStorage(formElement);
     });
   });
