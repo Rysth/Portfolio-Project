@@ -196,6 +196,19 @@ ul {
   gap: 1.5em;
 }
 
+.label {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.label--error {
+  color: rgb(255, 251, 0);
+  text-decoration: underline;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+}
+
 /* 6- Flexbox/Grid System */
 
 .flex-row {

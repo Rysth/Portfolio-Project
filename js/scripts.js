@@ -240,3 +240,29 @@ window.onload = () => {
   // AddPortfolioWork(): Called of the Function to fill the PortfolioElement.
   addPortfolioWork();
 };
+
+/* CONTACTS FORM VALIDATION */
+function isUpperCase(letter) {
+  const REGEX = /^[A-Za-z]+$/;
+  return !!(letter === letter.toUpperCase() && REGEX.test(letter));
+}
+
+const submitError = document.querySelector('#submit__error');
+const formElement = document.querySelector('#form');
+
+formElement.addEventListener('submit', (event) => {
+  const emailValue = event.target[1].value;
+  const emailArray = emailValue.split('');
+
+  for (let index = 0; index < emailArray.length; index += 1) {
+    const letter = emailArray[index];
+    const validator = isUpperCase(letter);
+    if (validator) {
+      submitError.style.visibility = 'visible';
+      event.preventDefault();
+      break;
+    } else {
+      submitError.style.visibility = 'hidden';
+    }
+  }
+});

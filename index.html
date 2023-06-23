@@ -14,18 +14,16 @@
       <div class="container">
         <div class="header__content flex-row align-center justify-between">
           <a href="#" class="header__link color-primary">My Logo</a>
-          <button href="#" id="header__button--open" type="button">
+          <button id="header__button--open" type="button">
             <img
-              id="header__button--image"
               class="header__toggle"
               src="./images/icons/burguer.svg"
               alt="Menu icon on the mobile version"
             />
           </button>
           <nav class="header__nav header__nav--inactive" id="header__nav">
-            <button href="#" id="header__button--close" type="button">
+            <button id="header__button--close" type="button">
               <img
-                id="header__button--image"
                 class="header__toggle"
                 src="./images/icons/x-icon.svg"
                 alt="Menu icon on the mobile version"
@@ -114,14 +112,14 @@
       </section>
 
       <!-- PORTFOLIO SECTION -->
-      <section>
+      <div>
         <div class="container">
           <div
             id="portfolio"
             class="portfolio padding-5 grid justify-center"
           ></div>
         </div>
-      </section>
+      </div>
 
       <!-- ABOUT SECTION -->
       <section class="section__white section__white--top" id="about">
@@ -258,8 +256,8 @@
       </section>
 
       <!-- CONTACTS SECTION -->
-      <section class="bg-white" id="contact">
-        <div class="contact section__blue section__blue--top">
+      <section class="bg-white">
+        <div class="contact section__blue section__blue--top" id="contact">
           <div class="container">
             <div class="contact__content padding-5 text-center">
               <header class="contact__header flex-column">
@@ -271,6 +269,7 @@
                 </p>
               </header>
               <form
+                id="form"
                 action="https://formspree.io/f/mwkjdngo"
                 class="contact__form"
                 method="POST"
@@ -309,9 +308,18 @@
                     ></textarea>
                   </li>
                   <li class="contact__actions">
-                    <button type="submit" class="button button__secondary">
+                    <button
+                      id="submit"
+                      type="submit"
+                      class="button button__secondary"
+                    >
                       Get in touch
                     </button>
+                  </li>
+                  <li class="contact__item">
+                    <label id="submit__error" class="label label--error"
+                      >Email must be in lowercase!</label
+                    >
                   </li>
                 </ul>
               </form>
