@@ -239,30 +239,71 @@ window.onload = () => {
 
   // AddPortfolioWork(): Called of the Function to fill the PortfolioElement.
   addPortfolioWork();
-};
 
-/* CONTACTS FORM VALIDATION */
-function isUpperCase(letter) {
-  const REGEX = /^[A-Za-z]+$/;
-  return !!(letter === letter.toUpperCase() && REGEX.test(letter));
-}
+  /* CONTACTS FORM VALIDATION */
+  function isUpperCase(letter) {
+    const REGEX = /^[A-Za-z]+$/;
+    return !!(letter === letter.toUpperCase() && REGEX.test(letter));
+  }
 
-const submitError = document.querySelector('#submit__error');
-const formElement = document.querySelector('#form');
+  const submitError = document.querySelector('#submit__error');
+  const formElement = document.querySelector('#form');
 
-formElement.addEventListener('submit', (event) => {
-  const emailValue = event.target[1].value;
-  const emailArray = emailValue.split('');
+  formElement.addEventListener('submit', (event) => {
+    const emailValue = event.target[1].value;
+    const emailArray = emailValue.split('');
 
-  for (let index = 0; index < emailArray.length; index += 1) {
-    const letter = emailArray[index];
-    const validator = isUpperCase(letter);
-    if (validator) {
-      submitError.style.visibility = 'visible';
-      event.preventDefault();
-      break;
-    } else {
-      submitError.style.visibility = 'hidden';
+    for (let index = 0; index < emailArray.length; index += 1) {
+      const letter = emailArray[index];
+      const validator = isUpperCase(letter);
+      if (validator) {
+        submitError.style.visibility = 'visible';
+        event.preventDefault();
+        break;
+      } else {
+        submitError.style.visibility = 'hidden';
+      }
+    }
+  });
+
+  // Function: InjectFormData()
+  // Put the information contained within the LocalStorage item called userData if the object exist.
+  // userData contains name, email and message.
+  const inputFields = document.querySelectorAll('.input');
+  function injectFormData() {
+    const object = JSON.parse(localStorage.getItem('userData'));
+    if (object) {
+      inputFields.forEach((input) => {
+        const value = object[input.id];
+        input.value = value;
+      });
     }
   }
-});
+
+  // Function: createLocalStorage()
+  // Create a FormData object which contains every single Input from the actual Form matching his
+  // key with his own value then it creates the new localStorage item called userData
+  // userData contains name, email and message.
+  const userData = {};
+  function createLocalStorage(formElement) {
+    const formData = new FormData(formElement);
+
+    // UserData: Single Data Object.
+    userData.name = formData.get('name');
+    userData.email = formData.get('email');
+    userData.message = formData.get('message');
+
+    localStorage.setItem('userData', JSON.stringify(userData));
+  }
+
+  // InputFields: Form input elements.
+  // Update in real-time the information container within the localStorage item.
+  // userData contains name, email and message.
+  inputFields.forEach((input) => {
+    input.addEventListener('input', () => {
+      createLocalStorage(formElement);
+    });
+  });
+
+  injectFormData();
+};
