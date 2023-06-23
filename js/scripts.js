@@ -203,7 +203,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`,
+                          (item) => `<li class="portfolio__item">${item}</li>`
                         )
                         .join('')}
                   </ul>
@@ -224,7 +224,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`,
+            </article>`
     )
     .join('')}`;
 
@@ -239,30 +239,59 @@ window.onload = () => {
 
   // AddPortfolioWork(): Called of the Function to fill the PortfolioElement.
   addPortfolioWork();
-};
 
-/* CONTACTS FORM VALIDATION */
-function isUpperCase(letter) {
-  const REGEX = /^[A-Za-z]+$/;
-  return !!(letter === letter.toUpperCase() && REGEX.test(letter));
-}
-
-const submitError = document.querySelector('#submit__error');
-const formElement = document.querySelector('#form');
-
-formElement.addEventListener('submit', (event) => {
-  const emailValue = event.target[1].value;
-  const emailArray = emailValue.split('');
-
-  for (let index = 0; index < emailArray.length; index += 1) {
-    const letter = emailArray[index];
-    const validator = isUpperCase(letter);
-    if (validator) {
-      submitError.style.visibility = 'visible';
-      event.preventDefault();
-      break;
-    } else {
-      submitError.style.visibility = 'hidden';
-    }
+  /* CONTACTS FORM VALIDATION */
+  function isUpperCase(letter) {
+    const REGEX = /^[A-Za-z]+$/;
+    return !!(letter === letter.toUpperCase() && REGEX.test(letter));
   }
-});
+
+  const submitError = document.querySelector('#submit__error');
+  const formElement = document.querySelector('#form');
+
+  formElement.addEventListener('submit', (event) => {
+    const emailValue = event.target[1].value;
+    const emailArray = emailValue.split('');
+
+    for (let index = 0; index < emailArray.length; index += 1) {
+      const letter = emailArray[index];
+      const validator = isUpperCase(letter);
+      if (validator) {
+        submitError.style.visibility = 'visible';
+        event.preventDefault();
+        break;
+      } else {
+        submitError.style.visibility = 'hidden';
+      }
+    }
+  });
+
+  //Function: createLocalStorage()
+  //Create a FormData object which contains every single Input from the actual Form matching his key with his own value
+  //Then it creates the new localStorage item called userData
+  //userData contains name, email and message.
+  function createLocalStorage(formElement) {
+    const formData = new FormData(formElement);
+
+    //UserData: Single Data Object.
+    const userData = {};
+    for (const data of formData.entries()) {
+      const key = data[0];
+      const value = data[1];
+      userData[key] = value;
+    }
+    localStorage.setItem('userData', JSON.stringify(userData));
+  }
+
+  //InputFields: Form input elements.
+  //Update in real-time the information container within the localStorage item.
+  //userData contains name, email and message.
+  const inputFields = document.querySelectorAll('.input');
+  inputFields.forEach((input) => {
+    input.addEventListener('input', (event) => {
+      createLocalStorage(formElement);
+    });
+  });
+
+  injectFormData();
+};
