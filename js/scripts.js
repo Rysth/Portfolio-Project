@@ -244,7 +244,7 @@ window.onload = () => {
 /* CONTACTS FORM VALIDATION */
 function isUpperCase(letter) {
   const REGEX = /^[A-Za-z]+$/;
-  return !!(letter === letter.toUpperCase() && REGEX.test(letter));
+  return letter === letter.toUpperCase() && REGEX.test(letter) ? true:false;
 }
 
 const submitError = document.querySelector('#submit__error');
