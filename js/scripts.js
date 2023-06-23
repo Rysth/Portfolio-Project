@@ -203,7 +203,7 @@ window.onload = () => {
                   <ul class="portfolio__list flex-row">
                       ${item.categories
                         .map(
-                          (item) => `<li class="portfolio__item">${item}</li>`
+                          (item) => `<li class="portfolio__item">${item}</li>`,
                         )
                         .join('')}
                   </ul>
@@ -224,7 +224,7 @@ window.onload = () => {
                     >See project</button>
                 </div>
               </div>
-            </article>`
+            </article>`,
     )
     .join('')}`;
 
@@ -244,7 +244,7 @@ window.onload = () => {
 /* CONTACTS FORM VALIDATION */
 function isUpperCase(letter) {
   const REGEX = /^[A-Za-z]+$/;
-  return letter === letter.toUpperCase() && REGEX.test(letter) ? true:false;
+  return !!(letter === letter.toUpperCase() && REGEX.test(letter));
 }
 
 const submitError = document.querySelector('#submit__error');
