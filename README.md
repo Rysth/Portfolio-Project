@@ -28,8 +28,7 @@
 
 # 📖 Portfolio Project <a name="about-project"></a>
 
-**Portfolio Project** is a project where I've to show my skills setting up my workspace properly to
-finish my first Web Developer Portfolio project by following a Figma Portfolio Template Design.
+A **Portfolio Project** to show up the most relevant works that I have built. Used HTML, CSS, and JavaScript.
 
 Also, I'm going to implement new technologies such as JavaScript files over the course of the program.
 
