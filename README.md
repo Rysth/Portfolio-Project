@@ -30,8 +30,6 @@
 
 A **Portfolio Project** to show up the most relevant works that I have built. Used HTML, CSS, and JavaScript.
 
-Also, I'm going to implement new technologies such as JavaScript files over the course of the program.
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
