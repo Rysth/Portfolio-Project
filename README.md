@@ -28,7 +28,7 @@
 
 # 📖 Portfolio Project <a name="about-project"></a>
 
-A **Portfolio Project** to show up the most relevant works that I have built by following a Figma Design. Build with HTML, CSS, and JavaScript.
+A **Portfolio Project** to show up the most relevant works that I have built by following a Figma Design. Built with HTML, CSS, and JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
